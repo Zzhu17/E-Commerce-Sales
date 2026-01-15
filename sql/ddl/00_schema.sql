@@ -1,0 +1,3 @@
+-- Postgres setup (run in psql).
+-- CREATE DATABASE olist_analytics;
+-- \c olist_analytics
