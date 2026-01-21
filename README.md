@@ -7,8 +7,29 @@
 
 ## Project Goal
 
-Build an end-to-end ecommerce analytics project with clean grains, KPI-ready facts, and Tableau-ready data sources.
+Build an end-to-end e-commerce analytics pipeline with:
 
+- Clean, well-defined data grains
+
+- KPI-consistent fact tables
+
+- Tableau-ready data sources
+
+- Business-oriented insights for performance review
+
+## KPI Framework
+### North-Star Metric
+- Revenue
+### Driver KPIs
+- Order Volume
+
+- Average Order Value (AOV)
+
+- Cancellation Rate
+
+- On-time Delivery Rate
+
+Revenue changes are decomposed into volume-driven vs value-driven effects to support operational decision-making.
 ## Data Model
 
 - `fact_orders` (order grain)
@@ -58,16 +79,28 @@ Tables:
 - Tableau notes: `tableau/data_source_notes.md`
 
 ## Insights
+### Revenue concentration:
+- Revenue is highly concentrated in a small number of states, with São Paulo (SP), Rio de Janeiro (RJ), and Minas Gerais (MG) contributing the majority of total revenue. This indicates strong regional dependency and potential geographic risk.
+### Order economics:
+- Average Order Value (AOV) remains stable at approximately 155, suggesting mature pricing behavior and limited short-term upside from price-based growth.
+### Operational quality:
+- The on-time delivery rate exceeds 92%, indicating generally reliable fulfillment operations. The cancellation rate is low (0.65%), but at scale still represents non-trivial revenue loss.
+### Seasonality:
+- Monthly revenue exhibits clear volatility and seasonality rather than steady growth, highlighting predictable demand fluctuations throughout the year.
+## Opportunity Sizing & Business Implications
+### Growth levers:
+- With AOV largely stable, revenue growth is primarily driven by order volume expansion rather than pricing adjustments.
 
-- Revenue is highly concentrated in a small number of states, with São Paulo (SP), Rio de Janeiro (RJ), and Minas Gerais (MG) contributing the majority of total revenue, indicating strong regional dependency. Average Order Value (AOV) remains stable at approximately 155, and the on-time delivery rate exceeds 92%, suggesting mature pricing and fulfillment operations. The cancellation rate is low at 0.65%, but given the large order volume, it still represents non-trivial revenue loss. Monthly revenue trends show clear volatility and seasonality rather than consistent growth, highlighting periods of demand fluctuation across the year.
+### Regional expansion:
+- Targeted growth initiatives in mid-performing states could generate meaningful incremental revenue while reducing over-reliance on top regions.
 
-## Opportunity Sizing
+### Operational improvement:
+- Even modest reductions in cancellation rates would recover revenue at scale without major structural changes.
 
-- Given the stable AOV, revenue growth is primarily driven by order volume expansion rather than price increases. A modest increase in order count or targeted growth in mid-performing states could generate meaningful incremental revenue. Additionally, small reductions in cancellation rates would recover lost revenue at scale, while improved seasonal planning and demand smoothing could mitigate revenue dips during low-demand months and improve overall revenue stability without significant operational changes.
-
+### Planning optimization:
+- Improved seasonal planning and demand smoothing could mitigate revenue dips during low-demand periods and improve overall revenue stability.
 ## Dashboard
 
-- `tableau/olist_dashboard.twbx`
-- Screenshots will be added
-- ![Revenue & Order Performance Dashboard](BA.png)
+- Tableau workbook:`tableau/olist_dashboard.twbx`
+- Dashboard screenshots: ![Revenue & Order Performance Dashboard](BA.png)
 
